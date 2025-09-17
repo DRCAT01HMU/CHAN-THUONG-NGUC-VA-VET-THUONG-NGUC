@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cẩm nang Chấn thương Ngực | USMLE Review</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+        .dark ::-webkit-scrollbar-track { background: #2d3748; }
+        .dark ::-webkit-scrollbar-thumb { background: #718096; }
+        .dark ::-webkit-scrollbar-thumb:hover { background: #a0aec0; }
+
+        /* Table of Contents Hover Effect */
+        .table-of-contents a { transition: all 0.2s ease-in-out; }
+        .table-of-contents a:hover { background-color: #eff6ff; color: #2563eb; }
+        .dark .table-of-contents a:hover { background-color: #1e293b; color: #60a5fa; }
+
+        /* Watermark Style */
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 12vw;
+            font-weight: 800;
+            color: rgba(156, 163, 175, 0.08);
+            z-index: 0;
+            pointer-events: none;
+            white-space: nowrap;
+            user-select: none;
+        }
+        .dark .watermark {
+            color: rgba(75, 85, 99, 0.15);
+        }
+
+        /* Table Card Hover Effect */
+        .table-card {
+             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .table-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        /* Table Row Hover Effect */
+        tbody tr {
+            transition: background-color 0.2s ease-in-out;
+        }
+        tbody tr:hover {
+            background-color: #f0f9ff; /* sky-50 */
+        }
+        .dark tbody tr:hover {
+            background-color: #1e293b; /* slate-800 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+
+    <!-- Watermark -->
+    <div class="watermark">TEAMDRCAT</div>
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl md:text-3xl font-bold text-blue-600 dark:text-blue-400 flex items-center">
+                <svg xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block h-7 w-7 md:h-8 md:w-8 mr-2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                Cẩm nang Chấn thương Ngực
+            </h1>
+            <div class="flex items-center space-x-2 md:space-x-4">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm..." class="hidden md:block w-48 lg:w-64 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                <button id="theme-toggle" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-800">
+                    <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm-.707 10.607a1 1 0 011.414 0l.707-.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0zM3 11a1 1 0 100 2h1a1 1 0 100-2H3z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 pb-4 md:hidden">
+            <input type="text" id="searchInputMobile" placeholder="Tìm kiếm trong cẩm nang..." class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto flex flex-col lg:flex-row">
+        <!-- Table of Contents -->
+        <aside class="w-full lg:w-1/4 lg:sticky top-24 self-start p-4">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md table-of-contents">
+                <h3 class="font-bold text-lg mb-3">Mục lục</h3>
+                <ul class="space-y-2">
+                    <li><a href="#section1" class="block p-2 rounded-md font-semibold">I. Đại cương & Phân loại</a></li>
+                    <li><a href="#section2" class="block p-2 rounded-md font-semibold">II. Sinh lý bệnh & Hội chứng</a></li>
+                    <li><a href="#section3" class="block p-2 rounded-md font-semibold">III. Chẩn đoán & Xử trí chi tiết</a>
+                        <ul class="pl-4 mt-2 space-y-2 text-sm">
+                            <li><a href="#subsection3A" class="block p-1 rounded-md">A. Tổn thương Thành ngực</a></li>
+                            <li><a href="#subsection3B" class="block p-1 rounded-md">B. Tổn thương Khoang Màng phổi & Nhu mô</a></li>
+                            <li><a href="#subsection3C" class="block p-1 rounded-md">C. Tổn thương Trung thất & Mạch máu lớn</a></li>
+                            <li><a href="#subsection3D" class="block p-1 rounded-md">D. Biến chứng & Tình huống đặc biệt</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section4" class="block p-2 rounded-md font-semibold">IV. Tiếp cận Chẩn đoán Hình ảnh</a></li>
+                    <li><a href="#section5" class="block p-2 rounded-md font-semibold">V. Nguyên tắc Xử trí Chung (ATLS)</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="w-full lg:w-3/4 p-4 md:p-8">
+
+            <!-- Section I -->
+            <section id="section1" class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4">I. Đại cương và Phân loại Chấn thương Ngực 📖</h2>
+                <div class="overflow-x-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg table-card">
+                    <table class="min-w-full text-sm text-left searchable-table">
+                        <thead class="bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300 uppercase">
+                            <tr><th scope="col" class="px-6 py-3 w-1/4">Hạng mục</th><th scope="col" class="px-6 py-3 w-3/4">Chi tiết</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Định nghĩa Chung</td><td class="px-6 py-4">Là một cấp cứu ngoại khoa thường gặp, ảnh hưởng trực tiếp đến hệ hô hấp và tuần hoàn, có thể nhanh chóng dẫn đến tử vong nếu không được chẩn đoán và xử trí kịp thời.</td></tr>
+                            <tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Chấn thương Ngực Kín (CTNK)<br><span class="text-xs font-normal text-gray-500 dark:text-gray-400">Blunt Chest Trauma</span></td><td class="px-6 py-4"><p class="mb-2">🤕 <strong>Đặc điểm:</strong> Tổn thương lồng ngực do cơ chế va đập, sang chấn, nhưng thành ngực vẫn kín, khoang màng phổi không thông với môi trường bên ngoài.</p><p class="mb-2"><strong>Nguyên nhân:</strong> Chủ yếu do tai nạn giao thông (>70-75%) và tai nạn lao động. Thường nằm trong bệnh cảnh đa chấn thương.</p></td></tr>
+                            <tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Vết thương Ngực (VTN)<br><span class="text-xs font-normal text-gray-500 dark:text-gray-400">Penetrating Chest Trauma</span></td><td class="px-6 py-4"><p class="mb-2">🔪 <strong>Đặc điểm:</strong> Tổn thương do dị vật sắc nhọn hoặc hỏa khí đâm xuyên, làm thủng thành ngực.</p><p class="mb-2"><strong>Nguyên nhân:</strong> Chủ yếu do bạch khí (dao, kéo). Thường rất cấp cứu do chảy máu nhiều.</p></td></tr>
+                            <tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Phân loại theo ATLS</td><td class="px-6 py-4"><p class="mb-2">🚨 <strong>"The Lethal Six" - 6 Tổn thương Gây tử vong Ngay lập tức:</strong><br>&nbsp;&nbsp;&nbsp;1. Tắc nghẽn đường thở<br>&nbsp;&nbsp;&nbsp;2. Tràn khí màng phổi dưới áp lực<br>&nbsp;&nbsp;&nbsp;3. Tràn khí màng phổi hở<br>&nbsp;&nbsp;&nbsp;4. Tràn máu màng phổi lượng nhiều<br>&nbsp;&nbsp;&nbsp;5. Mảng sườn di động<br>&nbsp;&nbsp;&nbsp;6. Chèn ép tim cấp</p><p>🔎 <strong>"The Hidden Six" - 6 Tổn thương Tiềm tàng Nguy hiểm:</strong><br>&nbsp;&nbsp;&nbsp;1. Chấn thương động mạch chủ ngực<br>&nbsp;&nbsp;&nbsp;2. Tổn thương khí-phế quản<br>&nbsp;&nbsp;&nbsp;3. Đụng dập tim<br>&nbsp;&nbsp;&nbsp;4. Vỡ cơ hoành<br>&nbsp;&nbsp;&nbsp;5. Vỡ thực quản<br>&nbsp;&nbsp;&nbsp;6. Đụng dập phổi</p></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section II -->
+            <section id="section2" class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 border-l-4 border-green-500 pl-4">II. Sinh lý bệnh và Các Hội chứng Thường gặp 🩺</h2>
+                <div class="overflow-x-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg table-card">
+                    <table class="min-w-full text-sm text-left searchable-table">
+                        <thead class="bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300 uppercase">
+                            <tr><th scope="col" class="px-6 py-3 w-1/4">Hội chứng / Sinh lý bệnh</th><th scope="col" class="px-6 py-3 w-3/4">Chi tiết</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Rối loạn Sinh lý Hô hấp</td><td class="px-6 py-4"><p>💨 <strong>Nguyên tắc:</strong> Sự toàn vẹn của thành ngực, áp lực âm trong KMP, và sự thông thoáng của đường thở là các yếu tố cốt lõi.</p><p><strong>Trong chấn thương:</strong> Gãy xương sườn, tràn máu/khí, đau, và tắc nghẽn đường thở sẽ gây ra các rối loạn sinh lý, dẫn đến suy hô hấp.</p></td></tr>
+                            <tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Hô hấp Đảo ngược & Trung thất Lắc lư</td><td class="px-6 py-4"><p>🔄 <strong>Mô tả:</strong> Gặp trong <strong>Mảng sườn Di động (MSDĐ)</strong> và <strong>Vết thương Ngực hở (VTNH)</strong>.</p><p class="mb-2"><strong>Cơ chế:</strong> Mảng sườn/lỗ thủng di động ngược chiều với lồng ngực lành, làm trung thất di chuyển qua lại theo nhịp thở.</p><p><strong>Hậu quả:</strong> Rối loạn thông khí nghiêm trọng (khí cặn luẩn quẩn), giảm hồi lưu tĩnh mạch, và suy hô hấp - tuần hoàn nặng.</p></td></tr>
+                            <tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Chèn ép tim cấp<br><span class="text-xs font-normal text-gray-500 dark:text-gray-400">Cardiac Tamponade</span></td><td class="px-6 py-4"><p>❤️ <strong>Cơ chế:</strong> Máu chảy vào khoang màng ngoài tim, gây chèn ép tim.</p><p class="mb-2"><strong>Hậu quả:</strong> Tim không thể giãn ra, giảm tiền tải và cung lượng tim, gây sốc tắc nghẽn.</p><p><strong>Lâm sàng:</strong> Tam chứng Beck (<strong>tụt huyết áp, tĩnh mạch cổ nổi, tiếng tim mờ</strong>), mạch nghịch (pulsus paradoxus).</p></td></tr>
+                            <tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Xẹp phổi<br><span class="text-xs font-normal text-gray-500 dark:text-gray-400">Atelectasis</span></td><td class="px-6 py-4"><p>💨 <strong>Cơ chế:</strong> Do chèn ép từ bên ngoài (tràn máu/khí), mất áp lực âm, tắc nghẽn từ bên trong (máu, đờm), và giảm thông khí do đau.</p><p><strong>Hậu quả:</strong> Tạo vòng xoắn bệnh lý: xẹp phổi → ứ đọng dịch tiết → tắc nghẽn nặng hơn, là tiền đề của viêm phổi.</p></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Section III -->
+            <section id="section3" class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 border-l-4 border-red-500 pl-4">III. Chẩn đoán và Xử trí các Thể bệnh Cụ thể 🚑</h2>
+                
+                <div id="subsection3A">
+                    <h3 class="text-xl font-semibold mb-4 mt-8">A. Các tổn thương Thành ngực</h3>
+                    <div class="overflow-x-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg table-card"><table class="min-w-full text-sm text-left searchable-table"><thead class="bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300 uppercase"><tr><th class="px-6 py-3 w-1/5">Thể bệnh</th><th class="px-6 py-3 w-2/5">Chẩn đoán</th><th class="px-6 py-3 w-2/5">Xử trí</th></tr></thead><tbody><tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Gãy Xương sườn Đơn thuần</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Đau ngực khu trú, điểm đau chói.</p>
+                                <p>Cận lâm sàng: X-quang thấy gãy xương, không có TM-TKMP đáng kể.</p>
+                            </td><td class="px-6 py-4"><p>💊 <strong>Bảo tồn là chính:</strong> Giảm đau hiệu quả (đa phương thức) và vật lý trị liệu hô hấp tích cực để tránh xẹp phổi/viêm phổi.</p></td></tr><tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Mảng sườn Di động (MSDĐ)</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Dấu hiệu <strong>"hô hấp đảo ngược"</strong>. Suy hô hấp, đau dữ dội.</p>
+                                <p>Cận lâm sàng: X-quang/CT thấy gãy ≥3 xương sườn liên tiếp, mỗi xương gãy ở ≥2 nơi. Luôn đi kèm đụng dập phổi.</p>
+                            </td><td class="px-6 py-4"><p>🏥 <strong>Điều trị nền tảng:</strong> Dẫn lưu màng phổi, giảm đau tối ưu (thường là gây tê vùng), vật lý trị liệu, và quản lý dịch cẩn thận.</p><p>💨 <strong>Thở máy:</strong> Khi có suy hô hấp nặng hoặc chấn thương sọ não kèm theo.</p><p>🔪 <strong>Phẫu thuật (SSRF):</strong> Khi khó cai máy thở, biến dạng lồng ngực nặng, đau mạn tính.</p></td></tr><tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Gãy Xương ức</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Đau chói vùng giữa xương ức.</p>
+                                <p>Cận lâm sàng: CT ngực. Cần tầm soát <strong>tổn thương tim</strong> đi kèm (ECG, men tim).</p>
+                            </td><td class="px-6 py-4"><p>💊 <strong>Bảo tồn</strong> nếu gãy không di lệch và không có tổn thương tim.</p><p>🔪 <strong>Phẫu thuật</strong> nếu gãy di lệch nhiều.</p></td></tr></tbody></table></div>
+                </div>
+
+                <div id="subsection3B">
+                    <h3 class="text-xl font-semibold mb-4 mt-8">B. Các tổn thương Khoang Màng phổi và Nhu mô</h3>
+                    <div class="overflow-x-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg table-card"><table class="min-w-full text-sm text-left searchable-table"><thead class="bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300 uppercase"><tr><th class="px-6 py-3 w-1/5">Thể bệnh</th><th class="px-6 py-3 w-2/5">Chẩn đoán</th><th class="px-6 py-3 w-2/5">Xử trí</th></tr></thead><tbody><tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Tràn khí MP dưới áp lực</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Suy hô hấp cấp, sốc tắc nghẽn, khí quản lệch, gõ vang, mất rì rào phế nang.</p>
+                                <p>Chẩn đoán lâm sàng, không chờ X-quang.</p>
+                            </td><td class="px-6 py-4"><p>🆘 <strong>Cấp cứu tức thì:</strong> Chọc kim giải áp (Needle decompression) ở KLS 2 đường giữa đòn hoặc KLS 5 đường nách trước.</p><p>➡️ <strong>Dứt điểm:</strong> Đặt ống dẫn lưu màng phổi.</p></td></tr><tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Tràn khí MP hở</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Vết thương thủng thành ngực, có tiếng <strong>"phì phò máu khí"</strong>.</p>
+                            </td><td class="px-6 py-4"><p>🆘 <strong>Sơ cứu:</strong> Băng bịt vết thương bằng gạc dán 3 cạnh.</p><p>➡️ <strong>Dứt điểm:</strong> Đặt ống dẫn lưu màng phổi (ở vị trí khác) và khâu lại vết thương.</p></td></tr><tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Tràn máu MP lượng nhiều</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Sốc mất máu, gõ đục, mất rì rào phế nang.</p>
+                                <p>Cận lâm sàng: X-quang thấy mờ toàn bộ phế trường.</p>
+                            </td><td class="px-6 py-4"><p>➡️ <strong>Hồi sức & Can thiệp đồng thời:</strong> Đặt dẫn lưu màng phổi cỡ lớn, kích hoạt phác đồ truyền máu ồ ạt.</p><p>🔪 <strong>Mở ngực cấp cứu:</strong> Khi máu ra >1500ml ban đầu hoặc chảy >200ml/giờ liên tục.</p></td></tr><tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Đụng dập phổi</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Suy hô hấp giảm oxy máu, có thể ho ra máu.</p>
+                                <p>Cận lâm sàng: Hình ảnh đông đặc/kính mờ trên X-quang/CT, thường <strong>xuất hiện muộn sau 6-24 giờ</strong>.</p>
+                            </td><td class="px-6 py-4"><p>💊 <strong>Điều trị hỗ trợ:</strong> Cung cấp oxy, giảm đau hiệu quả, vật lý trị liệu, <strong>quản lý dịch cẩn thận (hạn chế dịch)</strong>.</p><p>💨 <strong>Thở máy:</strong> Khi có ARDS hoặc suy hô hấp nặng.</p></td></tr></tbody></table></div>
+                </div>
+
+                <div id="subsection3C">
+                    <h3 class="text-xl font-semibold mb-4 mt-8">C. Các tổn thương Trung thất và Mạch máu lớn</h3>
+                    <div class="overflow-x-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg table-card"><table class="min-w-full text-sm text-left searchable-table"><thead class="bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300 uppercase"><tr><th class="px-6 py-3 w-1/5">Thể bệnh</th><th class="px-6 py-3 w-2/5">Chẩn đoán</th><th class="px-6 py-3 w-2/5">Xử trí</th></tr></thead><tbody><tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Chấn thương Tim (Đụng dập, Vết thương)</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Đau ngực, tụt huyết áp. Có thể có dấu hiệu <strong>chèn ép tim cấp</strong> (tam chứng Beck).</p>
+                                <p>Cận lâm sàng: ECG (rối loạn nhịp, ST chênh), Troponin tăng, eFAST (phát hiện dịch màng tim).</p>
+                            </td><td class="px-6 py-4"><p>💊 <strong>Đụng dập tim:</strong> Theo dõi, điều trị hỗ trợ.</p><p>🔪 <strong>Vết thương tim/Chèn ép tim cấp:</strong> Phẫu thuật cấp cứu (thoracotomy/sternotomy) để giải áp và khâu vết thương.</p></td></tr><tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Chấn thương ĐM chủ ngực</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Cơ chế chấn thương giảm tốc. Có thể không có triệu chứng rõ ràng.</p>
+                                <p>Cận lâm sàng: X-quang có dấu hiệu gợi ý (<strong>trung thất rộng</strong>). CTA ngực là tiêu chuẩn vàng.</p>
+                            </td><td class="px-6 py-4"><p>💊 <strong>Nội khoa ban đầu:</strong> Kiểm soát chặt chẽ nhịp tim và huyết áp (dùng chẹn beta).</p><p>🛠️ <strong>Can thiệp dứt điểm:</strong> Can thiệp nội mạch đặt stent graft (TEVAR) là lựa chọn ưu tiên.</p></td></tr><tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Tổn thương Khí-Phế quản</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Ho ra máu, tràn khí dưới da ồ ạt, rò khí lớn và liên tục qua dẫn lưu.</p>
+                                <p>Cận lâm sàng: Dấu hiệu "phổi rơi" (fallen lung) trên X-quang. Nội soi phế quản là tiêu chuẩn vàng.</p>
+                            </td><td class="px-6 py-4"><p>🔪 <strong>Phẫu thuật cấp cứu:</strong> Mở ngực để khâu nối lại đường thở.</p></td></tr><tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Vỡ Thực quản</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Đau ngực dữ dội, sốt, tràn khí dưới da ở cổ. Dấu hiệu Hamman (+).</p>
+                                <p>Cận lâm sàng: CT ngực có uống thuốc cản quang là tốt nhất.</p>
+                            </td><td class="px-6 py-4"><p>🔪 <strong>Phẫu thuật cấp cứu:</strong> Khâu lại lỗ vỡ và dẫn lưu rộng rãi trung thất.</p></td></tr></tbody></table></div>
+                </div>
+                
+                <div id="subsection3D">
+                    <h3 class="text-xl font-semibold mb-4 mt-8">D. Biến chứng và Tình huống đặc biệt</h3>
+                     <div class="overflow-x-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg table-card"><table class="min-w-full text-sm text-left searchable-table"><thead class="bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300 uppercase"><tr><th class="px-6 py-3 w-1/5">Thể bệnh</th><th class="px-6 py-3 w-2/5">Chẩn đoán</th><th class="px-6 py-3 w-2/5">Xử trí</th></tr></thead><tbody><tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Rò khí kéo dài</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Sủi bọt khí liên tục trong bình dẫn lưu sau 5-7 ngày.</p>
+                            </td><td class="px-6 py-4"><p>💊 <strong>Bảo tồn ban đầu:</strong> Giảm áp lực hút, dùng van Heimlich.</p><p>🔪 <strong>Can thiệp:</strong> VATS tìm và xử lý lỗ rò nếu bảo tồn thất bại.</p></td></tr><tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Tràn dịch Dưỡng chấp</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Dịch dẫn lưu có màu trắng sữa.</p>
+                                <p>Cận lâm sàng: Xét nghiệm dịch có Triglyceride > 110 mg/dL.</p>
+                            </td><td class="px-6 py-4"><p>💊 <strong>Bảo tồn:</strong> Dẫn lưu, cho nhịn ăn (nuôi dưỡng tĩnh mạch) hoặc chế độ ăn MCT, dùng Octreotide.</p><p>🔪 <strong>Phẫu thuật:</strong> Thắt ống ngực qua VATS nếu bảo tồn thất bại.</p></td></tr><tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Ngạt do Chấn thương</td><td class="px-6 py-4">
+                                <p>Lâm sàng: Tím tái vùng đầu-cổ-ngực trên, chấm xuất huyết, xuất huyết củng mạc sau chấn thương đè ép.</p>
+                            </td><td class="px-6 py-4"><p>🏥 <strong>Điều trị hỗ trợ và tầm soát:</strong> Các dấu hiệu ngoài da tự khỏi. Tiên lượng phụ thuộc vào <strong>các tổn thương nội tạng đi kèm.</strong></p></td></tr></tbody></table></div>
+                </div>
+
+            </section>
+
+            <!-- Section IV -->
+            <section id="section4" class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 border-l-4 border-purple-500 pl-4">IV. Tiếp cận Chẩn đoán Hình ảnh 📸</h2>
+                <div class="overflow-x-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg table-card">
+                    <table class="min-w-full text-sm text-left searchable-table">
+                        <thead class="bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300 uppercase">
+                            <tr><th class="px-6 py-3 w-1/5">Phương pháp</th><th class="px-6 py-3 w-2/5">Vai trò</th><th class="px-6 py-3 w-2/5">Ưu/Nhược điểm</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">X-quang ngực (CXR)</td><td class="px-6 py-4">Thăm dò ban đầu, không thể thiếu. Phát hiện gãy xương sườn, tràn máu/khí lượng nhiều, trung thất rộng.</td><td class="px-6 py-4"><strong>Ưu:</strong> Nhanh, rẻ, phổ biến, có thể thực hiện tại giường.<br><strong>Nhược:</strong> Độ nhạy thấp, có thể bỏ sót tổn thương (tràn khí ẩn, tổn thương ĐM chủ, vỡ cơ hoành).</td></tr>
+                            <tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Siêu âm (eFAST)</td><td class="px-6 py-4">Rất nhạy trong việc phát hiện tràn khí màng phổi (dấu hiệu trượt màng phổi), tràn máu màng phổi, và tràn dịch màng tim.</td><td class="px-6 py-4"><strong>Ưu:</strong> Rất nhanh, tại giường, không tia xạ, có thể lặp lại.<br><strong>Nhược:</strong> Phụ thuộc người làm, khó đánh giá trung thất và nhu mô phổi sâu.</td></tr>
+                            <tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">CT Scan có cản quang</td><td class="px-6 py-4">Tiêu chuẩn vàng để đánh giá toàn diện chấn thương ngực ở bệnh nhân huyết động ổn định.</td><td class="px-6 py-4"><strong>Ưu:</strong> Độ chính xác rất cao, phát hiện mọi loại tổn thương từ xương, nhu mô, màng phổi đến mạch máu và trung thất.<br><strong>Nhược:</strong> Tốn thời gian, chi phí cao, liều tia xạ, cần di chuyển bệnh nhân.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section V -->
+            <section id="section5" class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 border-l-4 border-yellow-500 pl-4">V. Nguyên tắc Xử trí Chung (ATLS) 📝</h2>
+                <div class="overflow-x-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg table-card">
+                    <table class="min-w-full text-sm text-left searchable-table">
+                        <thead class="bg-gray-100 dark:bg-gray-700 text-xs text-gray-700 dark:text-gray-300 uppercase">
+                            <tr><th class="px-6 py-3 w-1/5">Giai đoạn</th><th class="px-6 py-3 w-4/5">Mục tiêu và Hành động</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Primary Survey (Đánh giá Ban đầu)</td><td class="px-6 py-4"><p><strong>Mục tiêu:</strong> Xác định và xử trí ngay lập tức các tổn thương đe dọa tính mạng (The Lethal Six).</p><p><strong>Hành động (ABCDE):</strong><br>• <strong>A (Airway):</strong> Đảm bảo đường thở thông thoáng, bảo vệ cột sống cổ.<br>• <strong>B (Breathing):</strong> Đánh giá hô hấp, cung cấp oxy, xử trí TKMP dưới áp lực/hở, MSDĐ.<br>• <strong>C (Circulation):</strong> Kiểm soát chảy máu, đặt 2 đường truyền tĩnh mạch lớn, hồi sức dịch/máu, xử trí chèn ép tim/tràn máu lượng nhiều.<br>• <strong>D (Disability):</strong> Đánh giá nhanh thần kinh (Glasgow).<br>• <strong>E (Exposure):</strong> Bộc lộ toàn thân, tránh hạ thân nhiệt.</p></td></tr>
+                            <tr class="bg-gray-50 dark:bg-gray-700/50 border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Secondary Survey (Đánh giá Toàn diện)</td><td class="px-6 py-4"><p><strong>Mục tiêu:</strong> Sau khi bệnh nhân ổn định, tiến hành khám toàn diện từ đầu đến chân và xem xét các chẩn đoán hình ảnh chi tiết để phát hiện các tổn thương tiềm tàng (The Hidden Six) và các tổn thương khác.</p><p><strong>Hành động:</strong> Khám chi tiết các hệ cơ quan, xem xét chỉ định CT scan, hội chẩn chuyên khoa.</p></td></tr>
+                            <tr class="border-b dark:border-gray-700"><td class="px-6 py-4 font-semibold">Các thủ thuật Cấp cứu</td><td class="px-6 py-4"><p>• <strong>Chọc kim giải áp:</strong> Cho TKMP dưới áp lực. Vị trí: KLS 2 đường giữa đòn HOẶC KLS 4-5 đường nách trước.</p><p>• <strong>Đặt ống dẫn lưu màng phổi:</strong> Điều trị dứt điểm cho hầu hết các trường hợp tràn máu/khí. Vị trí tiêu chuẩn: KLS 4-5, tam giác an toàn (giữa đường nách trước và sau).</p></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 mt-8 border-t border-gray-200 dark:border-gray-700">
+        <p class="text-sm text-gray-600 dark:text-gray-400 font-bold">Dữ liệu được biên soạn và tổng hợp bởi TEAMDRCAT dựa trên kiến thức chuẩn Y Hà Nội và các Hướng dẫn Y Khoa cập nhật.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="to-top-button" title="Go to top" class="hidden fixed z-50 bottom-10 right-10 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-offset-gray-900 transition-opacity duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+    
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Dark Mode Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            lightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            darkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            darkIcon.classList.toggle('hidden');
+            lightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+
+        // Back to Top Button Logic
+        const toTopButton = document.getElementById('to-top-button');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                toTopButton.classList.remove('hidden');
+            } else {
+                toTopButton.classList.add('hidden');
+            }
+        };
+        toTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Search/Filter Logic
+        const searchInput = document.getElementById('searchInput');
+        const searchInputMobile = document.getElementById('searchInputMobile');
+        
+        const filterTables = (event) => {
+            const searchTerm = event.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main section');
+
+            sections.forEach(section => {
+                const rows = section.querySelectorAll('tbody tr');
+                let sectionHasVisibleRows = false;
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    if (searchTerm === '' || text.includes(searchTerm)) {
+                        row.style.display = '';
+                        sectionHasVisibleRows = true;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+
+                const title = section.querySelector('h2');
+                const subTitles = section.querySelectorAll('h3');
+                const tables = section.querySelectorAll('.table-card');
+
+                if (sectionHasVisibleRows) {
+                    if(title) title.style.display = '';
+                    subTitles.forEach(st => st.style.display = '');
+                    tables.forEach(tb => tb.style.display = '');
+                } else {
+                    if(title) title.style.display = 'none';
+                    subTitles.forEach(st => st.style.display = 'none');
+                    tables.forEach(tb => tb.style.display = 'none');
+                }
+            });
+        };
+
+        searchInput.addEventListener('keyup', filterTables);
+        searchInputMobile.addEventListener('keyup', filterTables);
+
+    </script>
+
+</body>
+</html>
+
